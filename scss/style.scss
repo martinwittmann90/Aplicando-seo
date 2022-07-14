@@ -1,0 +1,643 @@
+@import 'base/mapa.scss';
+@import 'base/mixin';
+@import 'base/extends';
+
+
+/* RESET ESTILOS */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    }
+/*HEADER*/
+#cabecera {
+    position: sticky;
+    z-index: 1;
+    font-size: nth($tamaño-fuente,2);
+    border-bottom: 7px solid nth($colores,2);
+    background-color: nth($colores,5);
+    padding: 4vh 0px;
+    div {
+        background-color: nth($colores,5);
+        nav {
+            ul {
+                @extend %centralizador;
+                li {
+                    a {
+                        color:nth($colores-fuente, 2);
+                        font-family: nth($fuentes, 2);
+                        font-size: nth($tamaño-fuente,3);
+                        &:hover {
+                            color:nth($colores-fuente, 1);
+                            transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+                            animation: heartBeat;
+                            animation-duration: 5s; 
+                        }}}}}}
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            display: none;
+        }
+                    }
+/* HEADER PARA DESKTOP */
+@media only screen and (min-width : 481px) {
+#hamburguesa {
+	display: none;
+}
+}
+/*MAIN*/
+.presentacion{
+    background-color: nth($colores,7);
+    padding: 5vh 2vw;
+        div{ 
+            padding: 10px;
+            @extend %centralizador;
+            flex-direction: column; 
+            text-align: center;  
+            h1, h2 {
+                padding: 15px;
+                color:nth($colores-fuente,1);
+                font-family: nth($fuentes,2);
+            }}}
+
+/*BANNER GIRATORIO*/
+    .banner {
+        background: nth($colores, 4);
+        height: 150px;
+        div {
+            white-space: nowrap;
+            padding: 20px 0px 50px 0px;
+            font-size: nth($tamaño-fuente,5);
+            font-weight: 500;
+            color: nth($colores-fuente, 1);
+            overflow: hidden;
+            position: relative;
+            div{
+                animation: rolltext 15s linear infinite both;
+                color: nth($colores-fuente, 1);
+                margin: 0;
+                white-space: nowrap;
+                display: inline-flex;
+                overflow: visible;
+                a {
+                    color: nth($colores-fuente, 1);
+                    font-size: nth($tamaño-fuente,5);
+                    font-family: nth($fuentes,1);
+                    @keyframes bounce {
+                        from {
+                            transform: initial;
+                        }
+                        to {
+                            transform: translateY(5px);
+                        }
+                        }
+                    @keyframes rotate {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                            to {
+                            transform: rotate(359deg);
+                        }
+                        }
+                    @keyframes wave {
+                        0% {
+                            transform: translate(3px,3px);
+                        }
+                        20%{
+                            transform: translate(-2px,2px);
+                        }
+                        40%{
+                            transform: translate(-3px,1px);
+                        }
+                        60%{
+                            transform: translate(-2px,-2px);
+                        }
+                        80%{
+                            transform: translate(1px,2px);
+                        }
+                        100% {
+                            transform: translate(3px,3px);
+                        }
+                        }
+                    @keyframes rolltext {
+                        from{
+                            transform: translate3d(0,0,0);
+                        }
+                        to{
+                            transform: translate3d(-50%,0,0);
+                        }
+                        }
+                    @keyframes hideToLeft {
+                        from{
+                            transform: translateX(0%);
+                        }
+                        to{
+                            transform: translateX(-100%);
+                        }}}}}}
+section {
+    div {
+        div {
+            div {
+                img {
+                    max-width: 100%;
+                    padding: 10px;
+                }}}}}
+
+.imagen1 {
+    background-color: nth($colores,8);
+    @extend %centralizador;
+}
+.imagen2 {
+    background-color: nth($colores,1);
+    @extend %centralizador;
+}
+.imagen3 {
+    background-color: nth($colores,9);
+    @extend %centralizador;
+}
+.imagen4 {
+    background-color: nth($colores,3);
+    @extend %centralizador;
+}
+
+.trabajaconnosotros {
+    background-color:nth($colores,5);
+    padding: 20px;
+    @extend %centralizador;
+    text-align: center;
+
+    div {
+        padding: 20px;
+
+        h2 {
+            color:nth($colores-fuente,1);
+            font-size: nth($tamaño-fuente,5);
+            
+        }}}
+.trabajaconnosotros {
+    div {
+        a {
+            @extend %boton;
+        }}}
+
+/*LOGO ROTATORIO*/
+.trabajaconnosotros {
+    div {
+        .rosca {
+    animation-name: girar;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear; 
+  }
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }}}}
+
+footer {
+    background-color:nth($colores,2);
+    padding: 50px;    
+        div {
+            
+            div{
+                div{
+                    
+                    p {                      
+                        color:nth($colores-fuente,3);
+                        font-family: nth($fuentes,2);
+                        text-align: center;
+                    }}}}}
+footer {
+    div {
+        div {
+            div {
+                h3 {
+                    color:nth($colores-fuente,3);
+                    font-family: nth($fuentes,2);
+                }}}}}
+footer {
+    div {
+        div {
+            div {
+                ul {
+                    li {      
+                        a {
+                            text-decoration: none;
+                            color:nth($colores-fuente,3);
+                            font-family: nth($fuentes,2);
+                            }}}}}}}
+
+/* FOOTER PARA CELULAR */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #futer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        object-fit:scale-down;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 30px;
+    }
+    #loguito {
+        width: 100%;
+        height: 100%;
+        object-fit:scale-down;
+        border: rad;
+        justify-content: center;
+        border-radius: 12px;
+        padding: 5px;
+    }
+    }
+/*PAGINA TRABAJOS*/
+.cuerpotrabajos {
+    background-color: nth($colores,7);
+}
+.cuerpoimagenes {
+	margin-top: 16vh;
+	padding: 3vh 3vw;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: repeat(15, auto);
+	grid-gap: 10px;
+}
+#one {
+	height: 95%;
+	grid-column: 1/8;
+	grid-row: 1/5;
+    @include estilofoto;
+}
+#two {
+	height: 90%;
+	grid-column:8/12;
+	grid-row: 1/5;
+    @include estilofoto;
+
+}
+#three {
+	grid-column: 12/17;
+	grid-row: 1/7;
+    @include estilofoto;
+}
+#four {
+	grid-column: 1/8;
+	grid-row: 5/9;
+	@include estilofoto;
+}
+#five {
+	width: 70%;
+	height: 55%;
+	grid-column: 9/12;
+	grid-row: 5/11;
+	@include estilofoto;
+}
+#six {
+	height: 85%;
+	grid-column: 3/11;
+	grid-row: 9/14;
+	@include estilofoto;
+}
+#seven {
+	width: 100%;
+	height: 100%;
+	grid-column: 13/16;
+	grid-row: 7/12;
+	@include estilofoto;
+}
+#kiwi {
+    @include estilofoto2;
+}
+#maquillaje {
+	@include estilofoto2;
+}
+#bratcelu {
+    @include estilofoto2;
+    border: rad;
+}
+#pinbrat {
+    @include estilofoto2;
+}
+#brat1 {
+    @include estilofoto2;
+}
+#brat2 {
+    @include estilofoto2;
+}
+#brat3 {
+    @include estilofoto2;
+}
+.muestrashome {
+	margin-top: 5px;
+	border-top: 1px solid nth($colores,10);
+	border-right: 0px; 
+	border-bottom: 0px;
+	border-left: 0px; 
+    color: nth($colores,10);
+    font-family: nth($fuentes,1);
+    padding: 3px;
+    text-align: center;
+	font-size: nth($tamaño-fuente,2);
+}
+
+/*PAGINA TRABAJOS PARA CELULARES*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.wrapper {
+		display:block;
+		grid-gap: 10px;
+		padding: 10px;
+	}
+	.five {
+		display: flex;
+		justify-content: center;
+	}
+	.seven {
+		display: flex;
+		justify-content: center;
+	}
+	#kiwi {
+		width: 100%;
+		height: 100%;
+		object-fit:scale-down;
+		justify-content: center;
+		border-radius: 12px;
+	}
+	#maquillaje {
+		width: 100%;
+		height: 100%;
+		object-fit:scale-down;
+		justify-content: center;
+		border-radius: 12px
+	}
+	#bratcelu {
+		width: 100%;
+		height: 100%;
+		object-fit:scale-down;
+		border: rad;
+		justify-content: center;
+		border-radius: 12px;
+	}
+	#pinbrat {
+		width: 100%;
+		height: 100%;
+		object-fit:scale-down;
+		justify-content: center;
+		border-radius: 12px;
+	}
+	#brat1 {
+		border-radius: 12px;
+	}
+	#brat2 {
+		width: 100%;
+		height: 100%;
+		object-fit:scale-down;
+		justify-content: center;
+		border-radius: 12px;
+	}
+	#brat3 {
+		border-radius: 12px;
+	}
+	.muestrashome {
+		margin-top: 5px;
+		border-top: 1px solid black;
+		border-right: 0px; 
+		border-bottom: 0px;
+		border-left: 0px; 
+		color: black;
+		font-family: 'Source Sans 3', sans-serif;
+		padding: 3px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+}
+/* ZOOM IMAGENES */
+
+.img-hover-zoom {
+	height: 100%;
+	overflow: hidden;
+} 
+.img-hover-zoom--slowmo img {
+	transform-origin: 50% 65%;
+	transition: transform 5s, filter 3s ease-in-out;
+}
+.img-hover-zoom--slowmo:hover img {
+	transform: scale(1.1);
+}
+/*PAGINA SERVICIOS*/
+main {
+    .primeraseccion, .terceraseccion {
+        background-color: nth($colores,7);
+        padding: 5vh 2vw;
+        div {
+            h2 {
+                color: nth($colores-fuente,3);
+                font-family: nth($fuentes,4);
+
+            }}}}
+main {
+    .primeraseccion, .terceraseccion {
+            div {
+                h3 {
+                    color: nth($colores-fuente,3);
+                    font-family: nth($fuentes,4);
+            
+                        }}}}
+main {
+    .primeraseccion {
+            div {
+                h4 {
+                    color: nth($colores-fuente,3);
+                    font-family: nth($fuentes,4);
+            
+                        }}}}
+main {
+    .segundaseccion, .cuartaseccion, .sextaseccion {
+        background-color: nth($colores,8);
+        padding: 5vh 2vw;
+        div {
+            h2 {
+                color: nth($colores-fuente,1);
+                font-family: nth($fuentes,4);
+            }}}}
+main {
+    .segundaseccion, .cuartaseccion, .sextaseccion {
+            div {
+                padding: 20px;
+                h3 {
+                    padding: 20px;
+                    color: nth($colores-fuente,1);
+                    font-family: nth($fuentes,4);
+                        }}}}
+main {
+    .segundaseccion, .cuartaseccion {
+            div {
+                ul {
+                    li {
+                        color: nth($colores-fuente,1);
+                        font-family: nth($fuentes,4);
+                    }}}}}
+main {
+    .terceraseccion 
+        {
+            div {
+                ul {
+                    li {
+                        color: nth($colores-fuente,3);
+                        font-family: nth($fuentes,4);
+                    }}}}}
+main {
+    .sextaseccion {
+        background-color:nth($colores,5);
+        padding: 20px;
+        @extend %centralizador;
+        text-align: center;
+            div {
+                margin: 10px;
+                padding: 40px 20px;
+                a {
+                @extend %boton;
+                padding: 20px;
+                }}}}                       
+/*PAGINA ABOUT*/
+#acerca {
+    section {
+        margin: 10vh 0px 10vh 0px;
+        @extend %centralizador;
+        text-align: center;
+            div {
+                margin: 0 auto;                
+                color:nth($colores-fuente,2);
+                font-family: nth($fuentes,4);
+                width: 400px;
+                padding: 20px;
+                box-shadow: 0px 10px 15px nth($colores-fuente,1);
+                border-radius: 20px;   
+                    img {
+                        border-radius: 15px;
+                        width: 100%;
+                        }}}}
+#acerca {
+    section {
+            div {
+                h2 {
+                    text-align: center;
+                    font-size: nth($tamaño-fuente,5);
+                    width: 100%;
+                    padding: 10% 0%;
+                        }}}}
+#acerca {
+    section {
+            div {
+                p {
+                    width: 100%;
+                    font-family: nth($fuentes,4);
+                    font-size: nth($tamaño-fuente,3);
+                    line-height: 2rem;
+                        }}}}
+#acerca {
+    section {
+            div {
+                a{
+                    @extend %boton;
+                }}}}
+/*PAGINA CONTACTO*/
+.mainformulario {
+    background-color: nth($colores,3);
+}
+
+.titulocontacto {
+    margin-top: 10vh;
+    div {
+        h2 {
+            @extend %centralizador;
+            font-family: nth($fuentes,2);
+            color: nth($colores,2);
+
+        }}}
+.titulocontacto {
+    div {
+        h3 {
+            @extend %centralizador;
+            font-family: nth($fuentes,2);
+            color: nth($colores,2);
+
+        }}}
+
+.formulario {
+    width: 340px;
+    height: 440px;
+    background-color: nth($colores,5);
+    border-radius: 15px;
+    box-shadow: 0 0 40px 10px nth($colores,2);
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: nth($fuentes,2);
+    position: relative;
+    h2 {
+        margin: 10px 0;
+        text-align: center;
+        padding-bottom: 10px;
+        width: 100%;
+        color:nth($colores-fuente,2);
+        border-bottom: 3px solid nth($colores,2);
+}}
+.formulario {
+    p {
+        &:before {
+            content: attr(type);
+            display: block;
+            margin: 28px 0 0;
+            font-size: 14px;
+            color: nth($colores,2);
+        }}}
+.formulario {
+            p {           
+            input {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                background: none;
+                outline: none;
+                resize: none;
+                border: 0;
+                font-family: nth($fuentes,2);
+                transition: all 0.3s;
+                border-bottom: 2px solid nth($colores,3);
+            &:focus {
+                border-bottom: 2px solid nth($colores,3);
+            }}}}
+.formulario {
+    button {
+    @extend %boton;
+    font-family: nth($fuentes,2);
+    margin: 8px 0 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+    background-color: nth($colores,2);
+    color: nth($colores-fuente,2);
+}}}
+.formulario {
+    div {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: 10px;
+    background: nth($colores,2);
+    color: nth($colores-fuente,3);
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    span {
+        margin: 0 5px 0 15px;
+}}}
+
+
+
